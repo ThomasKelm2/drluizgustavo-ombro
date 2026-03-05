@@ -1,99 +1,255 @@
 ---
-// src/Components/Footer.astro
+// src/components/Footer.astro
 const currentYear = new Date().getFullYear();
 ---
 
 <footer class="site-footer">
   <div class="container">
     
-    <div class="footer-content">
-      <div class="doctor-info">
-        <h3 class="doctor-name">Dr. Luiz Gustavo Fagundes Borges</h3>
-        <p class="doctor-credentials">Ortopedia e Traumatologia • Cirurgia do Ombro</p>
-        <p class="doctor-crm">CRM/PR 12345 • RQE 67890</p>
+    <div class="footer-grid">
+      
+      <div class="footer-col">
+        <h3 class="brand-name">
+          <span class="brand-icon"></span> DR. LUIZ GUSTAVO
+        </h3>
+        <p class="brand-desc">
+          Ortopedia e Traumatologia focada em tratamentos resolutivos e recuperação da sua qualidade de vida.
+        </p>
+        <div class="cfm-info">
+          <p>CRM-PR 15485 • RQE 9940</p>
+          <p class="tech-resp">Responsável Técnico</p>
+        </div>
       </div>
 
-      <div class="cfm-disclaimer">
-        <p>
-          <strong>Aviso Legal (Resolução CFM nº 1.974/11):</strong> As informações disponíveis neste site têm caráter estritamente educativo e informativo. Elas não substituem a consulta médica presencial, o diagnóstico ou o plano de tratamento individualizado. Em caso de dor ou desconforto, procure a avaliação de um médico especialista.
-        </p>
+      <div class="footer-col">
+        <h4 class="col-title">Navegação</h4>
+        <ul class="footer-links">
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#sobre">Sobre o Doutor</a></li>
+          <li><a href="#tratamentos">Tratamentos</a></li>
+          <li><a href="#faq">Dúvidas Frequentes</a></li>
+        </ul>
       </div>
+
+      <div class="footer-col">
+        <h4 class="col-title">Legal</h4>
+        <ul class="footer-links">
+          <li><a href="/termos">Termos de Uso</a></li>
+          <li><a href="/privacidade">Política de Privacidade</a></li>
+          <li><a href="/aviso">Aviso Legal</a></li>
+          <li><span class="compliance-tag">Compliance CFM 2.336/23</span></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="col-title">Contato</h4>
+        <ul class="footer-contact">
+          <li>
+            <strong>Clínica Curitiba</strong><br>
+            Rua XV de Novembro, 2223
+          </li>
+          <li>contato@drluizgustavoborges.com.br</li>
+          <li>WhatsApp: +55 41 99978-2006</li>
+        </ul>
+      </div>
+
     </div>
 
     <div class="footer-bottom">
-      <p class="copyright">
-        &copy; {currentYear} Dr. Luiz Gustavo. Todos os direitos reservados.
-      </p>
-      <p class="agency-signature">
-        Desenvolvido por <strong>KRAFT Mídia</strong>
-      </p>
+      <div class="disclaimer">
+        <p>
+          <strong>Aviso Legal:</strong> As informações disponíveis neste site possuem caráter estritamente educativo e informativo, não substituindo a consulta médica presencial. Para diagnóstico e tratamento adequados, é imprescindível a avaliação de um profissional.
+        </p>
+      </div>
+      
+      <div class="signature-area">
+        <p class="copyright">&copy; {currentYear} Todos os direitos reservados.</p>
+        <p class="agency">
+          Desenvolvido por <strong>KRAFT.</strong>
+        </p>
+      </div>
     </div>
 
   </div>
 </footer>
 
 <style>
+  /* Variáveis de cor baseadas no design escuro */
   .site-footer {
-    background-color: #081615; /* Um tom ainda mais escuro que a seção anterior para dar o limite final */
-    color: #8caba9; /* Texto num tom de verde/cinza bem discreto */
-    padding: 4rem 1rem 2rem 1rem;
-    font-size: 0.85rem;
-    border-top: 3px solid rgba(255, 255, 255, 0.05);
+    background-color: #030a0a; /* Fundo super escuro, quase preto */
+    color: #8caba9; /* Texto acinzentado/esverdeado */
+    padding: 5rem 1.5rem 2rem 1.5rem;
+    font-family: system-ui, -apple-system, sans-serif;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
   }
 
   .container {
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 0 auto;
     width: 100%;
+  }
+
+  /* Grid de 4 Colunas */
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+    gap: 3rem;
+    margin-bottom: 4rem;
+  }
+
+  .footer-col {
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    gap: 1.2rem;
   }
 
-  .footer-content {
-    display: flex;
-    justify-content: space-between;
-    gap: 4rem;
-  }
-
-  .doctor-info {
-    flex: 1;
-  }
-
-  .doctor-name {
+  /* Coluna 1: Marca */
+  .brand-name {
     color: #ffffff;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     font-weight: 700;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .brand-icon {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-color: #f69f46; /* Laranja da logo */
+    border-radius: 2px;
+  }
+
+  .brand-desc {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .cfm-info p {
+    margin: 0;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 0.95rem;
+  }
+
+  .cfm-info .tech-resp {
+    color: #5d7a78;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 0.25rem;
+  }
+
+  /* Títulos das Colunas */
+  .col-title {
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 600;
     margin: 0 0 0.5rem 0;
   }
 
-  .doctor-credentials {
-    margin: 0 0 0.25rem 0;
-    color: #b9cfce;
-  }
-
-  .doctor-crm {
-    color: #f69f46; /* Laranja/dourado para destacar o registro */
-    font-weight: 700;
-    margin: 0.25rem 1rem 1rem 1rem;
-  }
-
-  .cfm-disclaimer {
-    flex: 2;
-    background-color: rgba(255, 255, 255, 0.02);
-    padding: 1.5rem;
-    border-radius: 8px;
-    border-left: 3px solid #17a488;
-  }
-
-  .cfm-disclaimer p {
+  /* Listas de Links e Contato */
+  .footer-links, .footer-contact {
+    list-style: none;
+    padding: 0;
     margin: 0;
-    line-height: 1.6;
-    font-size: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
   }
 
-  .cfm-disclaimer strong {
+  .footer-links a, .footer-contact li {
+    color: #8caba9;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+    line-height: 1.5;
+  }
+
+  .footer-links a:hover {
+    color: #ffffff;
+  }
+
+  .compliance-tag {
+    font-size: 0.8rem;
+    color: #5d7a78;
+    cursor: default;
+  }
+
+  .footer-contact strong {
     color: #ffffff;
     display: block;
-    margin-bottom: 0.5rem;
-  }     
+    margin-bottom: 0.2rem;
+  }
+
+  /* Barra Inferior (Disclaimer e Assinatura) */
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 2.5rem;
+    gap: 4rem;
+  }
+
+  .disclaimer {
+    flex: 2;
+  }
+
+  .disclaimer p {
+    margin: 0;
+    font-size: 0.8rem;
+    line-height: 1.6;
+    color: #668280;
+  }
+
+  .disclaimer strong {
+    color: #ffffff;
+  }
+
+  .signature-area {
+    flex: 1;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .copyright, .agency {
+    margin: 0;
+    font-size: 0.85rem;
+  }
+
+  .agency strong {
+    color: #ffffff;
+    font-weight: 800;
+    letter-spacing: 1px;
+  }
+
+  /* Responsividade para Celulares */
+  @media (max-width: 992px) {
+    .footer-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .footer-grid {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+    
+    .footer-bottom {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 2rem;
+    }
+    
+    .signature-area {
+      text-align: left;
+    }
+  }
+</style>
