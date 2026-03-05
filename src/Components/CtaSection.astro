@@ -1,0 +1,207 @@
+---
+// src/Components/CtaSection.astro
+---
+
+<section class="cta-section">
+  <div class="container">
+    
+    <span class="eyebrow">PRÓXIMO PASSO</span>
+    
+    <h2 class="title">
+      Você já esperou tempo demais.<br />
+      A SUA DOR NO OMBRO <span class="glow-text">TEM SOLUÇÃO</span>.
+    </h2>
+    
+    <p class="subtitle">
+      Em uma única consulta, você terá diagnóstico claro e plano de tratamento para sua dor<br />
+    </p>
+
+    <a href="https://wa.me/SEUNUMERO" target="_blank" rel="noopener noreferrer" class="cta-button">
+      <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+      </svg>
+      Agendar Minha Consulta pelo WhatsApp
+    </a>
+
+    <div class="features-list">
+      <div class="feature-item">
+        <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+        Atendimento humanizado
+      </div>
+      <div class="feature-item">
+        <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+        Consulta particular
+      </div>
+      <div class="feature-item">
+        <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+        Curitiba · PR
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<style>
+  .cta-section {
+    background-color: #0d2220; /* Fundo verde super escuro, quase preto */
+    padding: 11rem 1rem 9rem 1rem;
+    text-align: center;
+    color: #ffffff;
+  }
+
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .eyebrow {
+    color: #f69f46; /* Laranja/Dourado */
+    font-size: 0.85rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 1.5rem;
+    display: block;
+  }
+
+  .title {
+    font-size: clamp(2rem, 4.5vw, 3rem);
+    font-weight: 800;
+    line-height: 1.2;
+    margin: 0 0 1.5rem 0;
+  }
+
+  .glow-text {
+    color: #ffffff;
+    text-shadow: 0 0 20px rgba(23, 164, 136, 0.8),
+                 0 0 40px rgba(23, 164, 136, 0.6),
+                 0 0 60px rgba(23, 164, 136, 0.4);
+  }
+
+  .subtitle {
+    color: #aebec2;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin: 0 0 3rem 0;
+  }
+
+  .margin-top-small {
+    display: block;
+    margin-top: 0.5rem;
+  }
+
+  /* Estilos do Badge de Agendamento */
+  .availability-badge {
+    border: 1px solid #4a4224; /* Borda puxada pro dourado escuro */
+    background-color: rgba(246, 159, 70, 0.05);
+    color: #f69f46;
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 2rem;
+  }
+
+  .dot {
+    width: 8px;
+    height: 8px;
+    background-color: #f69f46;
+    border-radius: 50%;
+    display: inline-block;
+    box-shadow: 0 0 8px rgba(246, 159, 70, 0.6);
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(246, 159, 70, 0.7); }
+    70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(246, 159, 70, 0); }
+    100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(246, 159, 70, 0); }
+  }
+
+  /* Botão CTA Principal */
+  .cta-button {
+    background-color: #17a488; /* Verde vibrante do print */
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 800;
+    padding: 1.25rem 2.5rem;
+    border-radius: 50px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    box-shadow: 0 8px 25px rgba(23, 164, 136, 0.3);
+    transition: transform 0.2s ease, background-color 0.3s ease;
+    margin-bottom: 4rem;
+  }
+
+  .cta-button:hover {
+    background-color: #148f76;
+    transform: translateY(-3px);
+  }
+
+  .btn-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  /* Lista de Benefícios do Rodapé */
+  .features-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    color: #6a8280; /* Texto discreto */
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+
+  .feature-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .feature-icon {
+    width: 16px;
+    height: 16px;
+    color: #f69f46; /* Ícones em laranja/dourado */
+  }
+
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .cta-section {
+      padding: 5rem 1rem 4rem 1rem;
+    }
+    
+    .subtitle br {
+      display: none;
+    }
+
+    .cta-button {
+      width: 100%;
+      justify-content: center;
+      padding: 1.25rem 1.5rem;
+      font-size: 1rem;
+    }
+
+    .availability-badge {
+      font-size: 0.8rem;
+      padding: 0.6rem 1.2rem;
+      text-align: left;
+    }
+
+    .features-list {
+      flex-direction: column;
+      gap: 1rem;
+      align-items: center;
+    }
+  }
+</style>

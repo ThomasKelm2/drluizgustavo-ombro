@@ -1,0 +1,99 @@
+---
+// src/Components/Footer.astro
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <div class="container">
+    
+    <div class="footer-content">
+      <div class="doctor-info">
+        <h3 class="doctor-name">Dr. Luiz Gustavo Fagundes Borges</h3>
+        <p class="doctor-credentials">Ortopedia e Traumatologia • Cirurgia do Ombro</p>
+        <p class="doctor-crm">CRM/PR 12345 • RQE 67890</p>
+      </div>
+
+      <div class="cfm-disclaimer">
+        <p>
+          <strong>Aviso Legal (Resolução CFM nº 1.974/11):</strong> As informações disponíveis neste site têm caráter estritamente educativo e informativo. Elas não substituem a consulta médica presencial, o diagnóstico ou o plano de tratamento individualizado. Em caso de dor ou desconforto, procure a avaliação de um médico especialista.
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="copyright">
+        &copy; {currentYear} Dr. Luiz Gustavo. Todos os direitos reservados.
+      </p>
+      <p class="agency-signature">
+        Desenvolvido por <strong>KRAFT Mídia</strong>
+      </p>
+    </div>
+
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    background-color: #081615; /* Um tom ainda mais escuro que a seção anterior para dar o limite final */
+    color: #8caba9; /* Texto num tom de verde/cinza bem discreto */
+    padding: 4rem 1rem 2rem 1rem;
+    font-size: 0.85rem;
+    border-top: 3px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 4rem;
+  }
+
+  .doctor-info {
+    flex: 1;
+  }
+
+  .doctor-name {
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem 0;
+  }
+
+  .doctor-credentials {
+    margin: 0 0 0.25rem 0;
+    color: #b9cfce;
+  }
+
+  .doctor-crm {
+    color: #f69f46; /* Laranja/dourado para destacar o registro */
+    font-weight: 700;
+    margin: 0.25rem 1rem 1rem 1rem;
+  }
+
+  .cfm-disclaimer {
+    flex: 2;
+    background-color: rgba(255, 255, 255, 0.02);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 3px solid #17a488;
+  }
+
+  .cfm-disclaimer p {
+    margin: 0;
+    line-height: 1.6;
+    font-size: 0.8rem;
+  }
+
+  .cfm-disclaimer strong {
+    color: #ffffff;
+    display: block;
+    margin-bottom: 0.5rem;
+  }     

@@ -1,0 +1,183 @@
+---
+// src/Components/AboutSection.astro
+---
+
+<section class="about-section">
+  <!-- ABOUT_SECTION_PRESENT -->
+  <div class="container">
+    
+    <div class="left-column">
+      <span class="eyebrow">QUEM VAI TE ATENDER</span>
+      <div class="doctor-card">
+        <img src="/Screenshot 2026-02-22 102733.png" alt="Dr. Luiz Gustavo Fagundes Borges" class="doctor-photo" />
+      </div>
+    </div>
+
+    <div class="right-column">
+      <h2 class="title">Mais de 15 anos dedicados exclusivamente ao ombro</h2>
+      
+      <div class="doctor-info">
+        <h3 class="doctor-name">
+          DR. LUIZ GUSTAVO<br />
+          FAGUNDES BORGES
+        </h3>
+        <span class="doctor-crm">CRM/PR 12345 • RQE 67890</span>
+      </div>
+      
+      <div class="text-content">
+        <p>Ao longo de mais de 15 anos de carreira, o Dr. Luiz Gustavo Fagundes Borges se dedicou a uma das articulações mais complexas do corpo humano. Formado em Ortopedia e Traumatologia, com especialização cirúrgica por meio de fellowship internacional, é referência no diagnóstico e tratamento das principais condições do ombro.</p>
+        <p>O que move o Dr. Luiz Gustavo é simples: <strong class="highlight">devolver qualidade de vida às pessoas.</strong> Cada paciente recebe atenção individualizada — sem pressa, sem diagnóstico genérico, sem tratamento de prateleira.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<style>
+  /* Fundo principal com pontos de luz profissionais */
+  .about-section {
+    background-color: #193c40;
+    background-image: 
+      radial-gradient(circle at 20% 30%, rgba(49, 119, 115, 0.15) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(49, 119, 115, 0.12) 0%, transparent 40%),
+      radial-gradient(circle at 40% 70%, rgba(49, 119, 115, 0.1) 0%, transparent 45%),
+      radial-gradient(circle at 90% 80%, rgba(49, 119, 115, 0.13) 0%, transparent 50%),
+      radial-gradient(circle at 10% 90%, rgba(49, 119, 115, 0.11) 0%, transparent 40%),
+      radial-gradient(circle at 60% 50%, rgba(49, 119, 115, 0.08) 0%, transparent 35%);
+    padding: 6rem 1rem;
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+  }
+
+  /* --- Coluna da Esquerda (Cartão) --- */
+  .left-column {
+    flex: 0 0 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .eyebrow {
+    color: #f69f46; /* Laranja/dourado */
+    font-size: 0.85rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    display: block;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+
+  .doctor-card {
+    background-color: #163634;
+    border: 1px solid #234e4a;
+    border-radius: 16px;
+    padding: 0;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .doctor-photo {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+  }
+
+  /* --- Coluna da Direita (Conteúdo) --- */
+  .right-column {
+    flex: 1;
+  }
+
+  .title {
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    font-weight: 800;
+    line-height: 1.2;
+    margin: 0 0 1.5rem 0;
+  }
+
+  .doctor-info {
+    margin-bottom: 2rem;
+  }
+
+  .doctor-name {
+    font-size: 1.3rem;
+    font-weight: 800;
+    line-height: 1.3;
+    margin: 0 0 0.5rem 0;
+    letter-spacing: 0.5px;
+    color: #ffffff;
+  }
+
+  .doctor-crm {
+    color: #f69f46;
+    font-size: 0.9rem;
+    font-weight: 600;
+    display: block;
+  }
+
+  .text-content {
+    color: #b9cfce;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 3rem;
+  }
+
+  .text-content p {
+    margin-bottom: 1.5rem;
+  }
+
+  .text-content p:last-child {
+    margin-bottom: 0;
+  }
+
+  .text-content .highlight {
+    color: #f69f46;
+    font-weight: 700;
+  }
+
+  /* --- Responsividade --- */
+  @media (max-width: 992px) {
+    .container {
+      flex-direction: column;
+      gap: 3rem;
+    }
+
+    .left-column {
+      flex: none;
+      width: 100%;
+      max-width: 450px;
+      margin: 0 auto;
+    }
+
+    .right-column {
+      text-align: center;
+    }
+
+    .text-content {
+      text-align: left;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .about-section {
+      padding: 4rem 1rem;
+    }
+
+    .left-column {
+      max-width: 280px;
+    }
+  }
+</style>
