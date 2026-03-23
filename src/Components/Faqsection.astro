@@ -4,15 +4,27 @@
 const faqs = [
   {
     question: '"E se precisar de cirurgia?"',
-    answer: 'É um medo compreensível e por isso a primeira consulta existe: para <strong class="text-white">entender o seu caso com calma</strong>. A maioria dos pacientes é tratada sem cirurgia. Quando ela é indicada, as técnicas de artroscopia são minimamente invasivas, com pequenas incisões e recuperação significativamente mais rápida do que as cirurgias tradicionais.'
+    answer: {
+      beforeHighlight: 'É um medo compreensível e por isso a primeira consulta existe: para ',
+      highlight: 'entender o seu caso com calma',
+      afterHighlight: '. A maioria dos pacientes é tratada sem cirurgia. Quando ela é indicada, as técnicas de artroscopia são minimamente invasivas, com pequenas incisões e recuperação significativamente mais rápida do que as cirurgias tradicionais.'
+    }
   },
   {
     question: '"Quanto tempo dura a recuperação?"',
-    answer: 'Depende do tratamento. Em casos clínicos, muitos pacientes sentem melhora em poucas semanas. Nas cirurgias artroscópicas, a maioria retorna às atividades leves em 4 a 6 semanas. <strong class="text-white">Você terá um protocolo de reabilitação detalhado do início ao fim</strong>, nunca ficará no escuro.'
+    answer: {
+      beforeHighlight: 'Depende do tratamento. Em casos clínicos, muitos pacientes sentem melhora em poucas semanas. Nas cirurgias artroscópicas, a maioria retorna às atividades leves em 4 a 6 semanas. ',
+      highlight: 'Você terá um protocolo de reabilitação detalhado do início ao fim',
+      afterHighlight: ', nunca ficará no escuro.'
+    }
   },
   {
     question: '"Quanto custa a consulta particular?"',
-    answer: 'A consulta particular garante diagnóstico preciso e atenção total ao seu caso. Entre em contato pelo WhatsApp para conhecer os <strong class="text-white">valores e condições de pagamento</strong>. O investimento em uma boa avaliação pode te poupar anos de dor e tratamentos ineficazes.'
+    answer: {
+      beforeHighlight: 'A consulta particular garante diagnóstico preciso e atenção total ao seu caso. Entre em contato pelo WhatsApp para conhecer os ',
+      highlight: 'valores e condições de pagamento',
+      afterHighlight: '. O investimento em uma boa avaliação pode te poupar anos de dor e tratamentos ineficazes.'
+    }
   }
 ];
 ---
@@ -34,7 +46,11 @@ const faqs = [
             <div class="icon-box">?</div>
             <h3 class="card-title">{faq.question}</h3>
           </div>
-          <p class="card-answer" set:html={faq.answer}></p>
+          <p class="card-answer">
+            {faq.answer.beforeHighlight}
+            <strong class="text-white">{faq.answer.highlight}</strong>
+            {faq.answer.afterHighlight}
+          </p>
         </div>
       ))}
     </div>
@@ -147,8 +163,7 @@ const faqs = [
     margin: 0;
   }
 
-  /* A classe text-white é aplicada direto no HTML do array lá em cima */
-  .faq-card :global(.text-white) {
+  .card-answer .text-white {
     color: #ffffff;
     font-weight: 700;
   }
