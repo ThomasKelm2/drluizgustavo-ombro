@@ -3,7 +3,7 @@
 ---
 
 <!-- ========== DESKTOP HERO (hidden on mobile) ========== -->
-<section class="hero-section hero-desktop">
+<section id="hero" class="hero-section hero-desktop">
   <div class="container">
     
     <header class="logo-container">
@@ -14,6 +14,10 @@
       <h1 class="headline">
         A <span class="highlight">DOR NO OMBRO</span> ESTÁ <strong>LIMITANDO SEUS MOVIMENTOS?</strong>
       </h1>
+
+      <div class="trust-box" role="note" aria-label="Destaque de experiência">
+        CUIDE DA SAUDE DO SEU OMBRO COM UM <span class="trust-highlight">ORTOPEDISTA COM +25 ANOS DE EXPERIENCIA</span>
+      </div>
 
       <p class="subheadline">
         Se a <strong>dor no ombro</strong> já tirou o seu sono, te impediu de trabalhar, de levantar
@@ -27,28 +31,13 @@
         </svg>
         AGENDAR CONSULTA PELO WHATSAPP
       </a>
-
-      <div class="stats-card" role="region" aria-label="Estatísticas">
-        <div class="stat">
-          <div class="stat-value">20+</div>
-          <div class="stat-label">Anos de experiência</div>
-        </div>
-        <div class="stat">
-          <div class="stat-value">3.000+</div>
-          <div class="stat-label">Cirurgias realizadas</div>
-        </div>
-        <div class="stat">
-          <div class="stat-value">15.000+</div>
-          <div class="stat-label">Pacientes atendidos</div>
-        </div>
-      </div>
     </main>
 
   </div>
 </section>
 
 <!-- ========== MOBILE HERO (hidden on desktop) ========== -->
-<section class="hero-section hero-mobile">
+<section id="hero-mobile" class="hero-section hero-mobile">
   <div class="m-inner">
 
     <header class="m-logo">
@@ -61,6 +50,10 @@
         <strong>LIMITANDO SEUS MOVIMENTOS?</strong>
       </h1>
 
+      <div class="m-trust-box" role="note" aria-label="Destaque de experiência">
+        CUIDE DA SAUDE DO SEU OMBRO COM UM <span class="m-trust-highlight">ORTOPEDISTA COM +25 ANOS DE EXPERIENCIA</span>
+      </div>
+
       <p class="m-subheadline">
         Se a <strong>dor no ombro</strong> já tirou o seu sono, te impediu de trabalhar ou de levantar o braço, você não precisa continuar assim. <strong>Existe tratamento eficaz.</strong>
       </p>
@@ -71,27 +64,12 @@
         </svg>
         AGENDAR CONSULTA
       </a>
-
-      <div class="m-stats-card" role="region" aria-label="Estatísticas">
-        <div class="m-stat">
-          <div class="m-stat-value">20+</div>
-          <div class="m-stat-label">Anos de experiência</div>
-        </div>
-        <div class="m-stat">
-          <div class="m-stat-value">3.000+</div>
-          <div class="m-stat-label">Cirurgias realizadas</div>
-        </div>
-        <div class="m-stat">
-          <div class="m-stat-value">15.000+</div>
-          <div class="m-stat-label">Pacientes atendidos</div>
-        </div>
-      </div>
     </main>
 
     <!-- Below the content box - mobile only -->
     <div class="m-learn-more">
       <p class="m-learn-text">Conheça mais sobre os tratamentos</p>
-      <a href="#tratamentos" class="m-learn-button">
+      <a href="#treatments" class="m-learn-button">
         Ver Tratamentos
         <svg class="m-arrow-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
           <path fill-rule="evenodd" d="M10 3a1 1 0 011 1v10.586l2.293-2.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L9 14.586V4a1 1 0 011-1z" clip-rule="evenodd"/>
@@ -180,10 +158,11 @@
   .subheadline {
     font-family: 'Montserrat';
     font-size: 1rem;
-    font-weight: 600;
+    font-weight: 400;
     line-height: 1.5;
     max-width: 900px;
     margin-bottom: 2.5rem;
+    margin-top: 2.5rem;
   }
 
   .subheadline strong {
@@ -226,45 +205,30 @@
     fill: currentColor;
   }
 
-  .stats-card {
-    display: flex;
-    gap: 1.25rem;
-    margin-top: 2.5rem;
+  .trust-box {
+    font-family: 'Montserrat';
+    margin: 0 0 1.5rem 0;
     background: rgba(255, 255, 255, 0.06);
     -webkit-backdrop-filter: blur(8px);
     backdrop-filter: blur(8px);
     border: 1px solid rgba(255,255,255,0.08);
-    padding: 1rem 1.25rem;
+    padding: 1rem 1.75rem;
     border-radius: 12px;
     box-shadow: 0 6px 20px rgba(0,0,0,0.18);
-    align-items: center;
-    justify-content: center;
+    width: fit-content;
+    max-width: 100%;
     color: #ffffff;
-    max-width: 720px;
-  }
-
-  .stat {
-    display: flex;
-    flex-direction: column;
-    gap: 0.25rem;
-    min-width: 0;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    flex: 1 1 0;
-  }
-
-  .stat-value {
-    font-family: 'Montserrat';
-    font-size: 1.375rem;
-    font-weight: 800;
+    font-size: 0.95rem;
+    font-weight: 700;
+    line-height: 1.45;
     letter-spacing: 0.5px;
+    text-align: left;
+    text-transform: uppercase;
   }
 
-  .stat-label {
-    font-family: 'Montserrat';
-    font-size: 0.875rem;
-    opacity: 0.95;
+  .trust-highlight {
+    color: #FFB800;
+    font-weight: 900;
   }
 
   /* ============================================
@@ -316,13 +280,13 @@
       -webkit-backdrop-filter: blur(4px);
       backdrop-filter: blur(4px);
       border-radius: 16px;
-      padding: 2.5rem 1.75rem 2.5rem 1.75rem;
+      padding: 2.75rem 2rem 2.75rem 2rem;
       border: 1px solid rgba(255,255,255,0.07);
     }
 
     .m-headline {
       font-family: 'Montserrat', sans-serif;
-      font-size: clamp(1.6rem, 7vw, 2.2rem);
+      font-size: clamp(1.4rem, 6.8vw, 2.2rem);
       font-weight: 600;
       line-height: 1.1;
       margin: 0 0 1.75rem 0;
@@ -341,38 +305,39 @@
     .m-subheadline {
       font-family: 'Montserrat', sans-serif;
       font-size: 0.95rem;
-      font-weight: 400;
+      font-weight: 200;
       line-height: 1.65;
       margin: 0 0 2.5rem 0;
       color: rgba(255,255,255,0.88);
     }
 
     .m-subheadline strong {
-      font-weight: 700;
+      font-weight: 500;
       color: #ffffff;
     }
 
     .m-cta-button {
       font-family: 'Montserrat', sans-serif;
-      display: flex;
+      display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 0.65rem;
-      background: linear-gradient(90deg, #25D366 0%, #1EBE57 50%, #128C7E 100%);
+      gap: 0.75rem;
+      background: linear-gradient(90deg, #1f6670 0%, #1f9ba8 50%, #45cfc7 100%);
       background-size: 200% 100%;
       background-position: 0% 50%;
       color: #ffffff;
       text-decoration: none;
-      padding: 1rem 1.5rem;
-      border-radius: 29px;
-      font-weight: 800;
-      font-size: 1.0rem;
+      padding: 1rem 3.5rem;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 0.95rem;
       letter-spacing: 0.5px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
-      width: 100%;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.24);
+      width: fit-content;
       transition: background-position 0.7s ease, transform 0.2s ease;
-      margin-bottom: 2.25rem;
+      margin: 0 auto 2.25rem auto;
       white-space: nowrap;
+      max-width: 100%;
     }
 
     .m-cta-button:active {
@@ -380,50 +345,33 @@
     }
 
     .m-whatsapp-icon {
-      width: 18px;
-      height: 18px;
+      width: 20px;
+      height: 20px;
       fill: currentColor;
       flex-shrink: 0;
     }
 
-    .m-stats-card {
-      display: flex;
-      width: 100%;
-      gap: 0;
+    .m-trust-box {
+      font-family: 'Montserrat', sans-serif;
+      width: fit-content;
+      max-width: 100%;
       background: rgba(255, 255, 255, 0.06);
       border: 1px solid rgba(255,255,255,0.1);
       border-radius: 12px;
-      overflow: hidden;
-    }
-
-    .m-stat {
-      flex: 1 1 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 0.9rem 0.5rem;
-      border-right: 1px solid rgba(255,255,255,0.08);
-      gap: 0.15rem;
-    }
-
-    .m-stat:last-child {
-      border-right: none;
-    }
-
-    .m-stat-value {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 1rem;
-      font-weight: 800;
-      letter-spacing: 0.3px;
-    }
-
-    .m-stat-label {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 0.7rem;
-      opacity: 0.85;
+      padding: 0.95rem 1rem;
+      margin: 0 auto 1.25rem auto;
       text-align: center;
-      line-height: 1.2;
+      font-size: 0.78rem;
+      line-height: 1.45;
+      font-weight: 700;
+      letter-spacing: 0.35px;
+      color: #ffffff;
+      text-transform: uppercase;
+    }
+
+    .m-trust-highlight {
+      color: #FFB800;
+      font-weight: 900;
     }
 
     /* Learn more section below content box */
