@@ -29,6 +29,39 @@ const faqs = [
 ];
 ---
 
+<script is:inline type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "E se precisar de cirurgia?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "É um medo compreensível e por isso a primeira consulta existe: para entender o seu caso com calma. A maioria dos pacientes é tratada sem cirurgia. Quando ela é indicada, as técnicas de artroscopia são minimamente invasivas, com pequenas incisões e recuperação significativamente mais rápida do que as cirurgias tradicionais."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quanto tempo dura a recuperação?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Depende do tratamento. Em casos clínicos, muitos pacientes sentem melhora em poucas semanas. Nas cirurgias artroscópicas, a maioria retorna às atividades leves em 4 a 6 semanas. Você terá um protocolo de reabilitação detalhado do início ao fim, nunca ficará no escuro."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quanto custa a consulta particular?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A consulta particular garante diagnóstico preciso e atenção total ao seu caso. Entre em contato pelo WhatsApp para conhecer os valores e condições de pagamento. O investimento em uma boa avaliação pode te poupar anos de dor e tratamentos ineficazes."
+      }
+    }
+  ]
+}
+</script>
+
 <section id="faqsection" class="faq-section">
   <!-- FAQ_SECTION_PRESENT -->
   <div class="container">
@@ -166,6 +199,10 @@ const faqs = [
   .card-answer .text-white {
     color: #ffffff;
     font-weight: 700;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .faq-card { transition: none; }
   }
 
   /* Responsividade */
